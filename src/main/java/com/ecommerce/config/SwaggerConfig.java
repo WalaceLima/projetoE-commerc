@@ -21,12 +21,17 @@ public class SwaggerConfig {
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("com.ecommerce")).paths(PathSelectors.ant("/**")).build()
+				.apis(RequestHandlerSelectors.basePackage
+("com.ecommerce"))
+.paths(PathSelectors.ant("/**"))
+.build()
 				.apiInfo(apiInfo());
 	}
 
 	private ApiInfo apiInfo() {
 		return new ApiInfo("ECommerce API - Clientes", "API para controle de clientes", "Versão 1.0",
-				"http://www.limaSoftwares.com.br", null, null, null, Collections.emptyList());
+				"http://www.cotiinformatica.com.br", null, null, null, 
+Collections.emptyList());
 	}
 }
+

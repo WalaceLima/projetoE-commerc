@@ -7,8 +7,11 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class ClienteResponseDto {
+public class AuthenticationResponseDto {
+	
 	private String message;
+	private String accessToken;
 	private Cliente data;
+	
 
 }

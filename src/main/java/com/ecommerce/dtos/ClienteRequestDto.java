@@ -5,10 +5,11 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-
-
+@Setter
+@Getter
 public class ClienteRequestDto {
 
 	@Size(min = 6, max = 150, message = "Nome do cliente deve ser de 6 a 150 caracteres.")
@@ -26,40 +27,5 @@ public class ClienteRequestDto {
 	@Size(min = 8, max = 20, message = "Senha do cliente é obrigatória.")
 	@NotBlank(message = "Senha do cliente é obrigatória.")
 	private String senha;
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getTelefone() {
-		return telefone;
-	}
-
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getSenha() {
-		return senha;
-	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
-	
-	
-	
 
 }
